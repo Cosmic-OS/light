@@ -34,14 +34,11 @@
 	<link rel="stylesheet" href="css/icomoon.css">
 	<!-- Simple Line Icons -->
 	<link rel="stylesheet" href="css/simple-line-icons.css">
-	<!-- Owl Carousel -->
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 	<!-- Bootstrap  -->
 	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/style.css" title="light">
-	<!-- Accordion  -->
-	<link rel="stylesheet" href="css/accordion.css">
+	<!-- Styles -->
+	<link rel="stylesheet" href="css/accordion_light.css" type="text/css" id="acc_theme">
+	<link rel="stylesheet" href="css/light.css" type="text/css" id="theme">
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 
@@ -53,10 +50,16 @@
 		<nav class="navbar navbar-default">
 			<div class="navbar-header">
 				<!-- Mobile Toggle Menu Button -->
+				<a href="#" class="js-inf-nav-toggle inf-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
 				<div style="max-height:50px">
 					<img style="float:left; margin-top:0.3em; margin-right: 0.5em;" src="images/favicon.png" width=50px height=50px />
 					<a class="navbar-brand" href="index.html">Cosmic-OS</a>
 				</div>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a onclick="changeTheme()"><span>Change Theme</span></a></li>
+				</ul>
 			</div>
 		</nav>
 		<!-- </div> -->
@@ -87,6 +90,38 @@
 							</div>
 						</div>
 					</div>
+					<!-- Google -->
+					<button class="accordion">Google</button>
+					<div class="panel">
+						<div class="col-md-12 text-center to-animate">
+							<div class="phone-image">
+								<h3 class="name">Pixel XL</h3>
+								<div class="position">Marlin</div>
+								<p>Joe Pacino</p>
+								<ul class="social social-circle">
+									<li><a href="http://androiddevelopers.proboards.com/thread/6/rom-r1-unofficial-cosmic-universe" target="_blank"><i class="icon-group"></i></a></li>
+									<li><a href="https://sourceforge.net/projects/cosmic-os/files/marlin/" target="_blank"><i class="icon-chevron-down"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+                    
+                    <!-- Honor -->
+					<button class="accordion">Honor</button>
+					<div class="panel">
+						<div class="col-md-12 text-center to-animate">
+							<div class="phone-image">
+								<h3 class="name">Honor View 10</h3>
+								<div class="position">Berkeley</div>
+								<p>Sagar Shah</p>
+								<ul class="social social-circle">
+									<li><a href="https://forum.xda-developers.com/honor-view-10/development/rom-cosmic-os-v3-1-universe-t3783101" target="_blank"><i class="icon-group"></i></a></li>
+									<li><a href="https://sourceforge.net/projects/cosmic-os/files/berkeley/" target="_blank"><i class="icon-chevron-down"></i></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+                    
 					<!-- Lenovo -->
 					<button class="accordion">Lenovo</button>
 					<div class="panel">
@@ -388,6 +423,33 @@
 		</div>
 	</footer>
 
+	<script>
+
+	var themeName = "css/dark";
+
+	function changeTheme(){
+		if (themeName == "css/dark"){
+				themeName = "css/light";
+				changeAcc();
+			} else {
+				themeName = "css/dark";
+				changeAcc();
+			}
+		document.getElementById("theme").href = themeName + ".css";
+		}
+
+		var athemeName = "css/accordion_dark";
+
+		function changeAcc(){
+			if (athemeName == "css/accordion_dark"){
+					athemeName = "css/accordion_light";
+				} else {
+					athemeName = "css/accordion_dark";
+				}
+			document.getElementById("acc_theme").href = athemeName + ".css";
+			}
+
+	</script>
 	<!-- jQuery -->
 	<script src="js/jquery.min.js"></script>
 	<!-- jQuery Easing -->
